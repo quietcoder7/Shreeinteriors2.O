@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shree Interiors - Beautiful, customized home interiors & modular furniture with 45-day delivery and 10-year warranty. Book your free consultation today!" />
+  <meta name="keywords" content="Shree Interiors, Interior Design, Modular Kitchens, Wardrobes, Living Room Design, Custom Furniture" />
+  <title>Shree Interiors | Modern Home Interiors & Modular Furniture</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-gift"></i> Festive Offer: Flat 15% Off on Modular Kitchens & Wardrobes!</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+917250763719"><i class="fa-solid fa-phone"></i> +91 72507 63719</a>
+        <span class="divider">|</span>
+        <span><i class="fa-solid fa-location-dot"></i> Pan India Experience Centres</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="header" id="navbar">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-couch"></i></div>
+        <div class="logo-text">
+          <span class="brand-name">SHREE</span>
+          <span class="brand-sub">INTERIORS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#offerings" class="nav-link">Offerings</a></li>
+          <li><a href="#estimator" class="nav-link">Cost Calculator</a></li>
+          <li><a href="#portfolio" class="nav-link">Design Gallery</a></li>
+          <li><a href="#process" class="nav-link">How It Works</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#faq" class="nav-link">FAQs</a></li>
+        </ul>
+        <div class="mobile-cta">
+          <button class="btn btn-primary open-modal-btn">Book Free Consultation</button>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary open-modal-btn hide-on-mobile">Book Free Consultation</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Inline Lead Form -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge-pill"><i class="fa-solid fa-star"></i> Rated 4.9/5 by 1,500+ Happy Homeowners</div>
+        <h1 class="hero-title">Custom Interiors That Give You <span class="highlight">20% More Space</span></h1>
+        <p class="hero-subtitle">Experience personalized 3D designs, precision German engineering, 45-day move-in guarantee, and a 10-year warranty on all furniture.</p>
+        
+        <div class="hero-usps">
+          <div class="usp-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>45-Day Delivery</span>
+          </div>
+          <div class="usp-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>10-Year Warranty</span>
+          </div>
+          <div class="usp-item">
+            <i class="fa-solid fa-cube"></i>
+            <span>3D Interactive Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Lead Form -->
+      <div class="hero-form-card">
+        <h3>Get Free 3D Design & Quote</h3>
+        <p>Talk to our top design experts today</p>
+        <form id="heroLeadForm" class="lead-form">
+          <div class="form-group">
+            <label for="heroName">Your Name</label>
+            <input type="text" id="heroName" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="heroPhone">Mobile Number</label>
+            <div class="input-with-prefix">
+              <span class="prefix">+91</span>
+              <input type="tel" id="heroPhone" pattern="[0-9]{10}" placeholder="9876543210" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="heroProperty">Floor Plan / Configuration</label>
+            <select id="heroProperty" required>
+              <option value="" disabled selected>Select Home Type</option>
+              <option value="1bhk">1 BHK</option>
+              <option value="2bhk">2 BHK</option>
+              <option value="3bhk">3 BHK</option>
+              <option value="4bhk">4+ BHK / Villa</option>
+              <option value="renovation">Kitchen / Renovation Only</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Get Free Estimate & Plan</button>
+          <p class="form-disclaimer"><i class="fa-solid fa-lock"></i> Zero spam. Your data is 100% confidential.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar-section">
+    <div class="container trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-house-circle-check"></i></div>
+        <div>
+          <h4>2,000+ Homes</h4>
+          <p>Delivered with excellence</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <div>
+          <h4>45 Days or Rent</h4>
+          <p>On-time completion clause</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-award"></i></div>
+        <div>
+          <h4>10 Years Warranty</h4>
+          <p>Tested for durability</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        <div>
+          <h4>No Hidden Costs</h4>
+          <p>100% Transparent quotation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offerings / Solutions -->
+  <section class="section offerings-section" id="offerings">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">OUR EXPERTISE</span>
+        <h2 class="section-title">End-to-End Interior Solutions</h2>
+        <p class="section-desc">From space-saving modular kitchens to complete bespoke luxury home transformations.</p>
+      </div>
+
+      <div class="offerings-grid">
+        <div class="offering-card">
+          <div class="offering-img-wrap">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Modular Kitchen" loading="lazy" />
+          </div>
+          <div class="offering-body">
+            <h3>Modular Kitchens</h3>
+            <p>Ergonomic, water-resistant, anti-bubble acrylic and laminate finishes with smart pull-outs.</p>
+            <a href="#estimator" class="card-link">Explore Designs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="offering-card">
+          <div class="offering-img-wrap">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Living Rooms" loading="lazy" />
+          </div>
+          <div class="offering-body">
+            <h3>Living & Dining Rooms</h3>
+            <p>Aesthetic TV units, partition walls, false ceiling designs, and custom premium seating.</p>
+            <a href="#estimator" class="card-link">Explore Designs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="offering-card">
+          <div class="offering-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Master Bedrooms" loading="lazy" />
+          </div>
+          <div class="offering-body">
+            <h3>Master Bedrooms</h3>
+            <p>Peaceful retreats with floor-to-ceiling wardrobes, dressing stations, and ambient lighting.</p>
+            <a href="#estimator" class="card-link">Explore Designs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="offering-card">
+          <div class="offering-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=700&q=80" alt="Smart Storage & Wardrobes" loading="lazy" />
+          </div>
+          <div class="offering-body">
+            <h3>Smart Space Savers</h3>
+            <p>Hydraulic beds, concealable study tables, and wardrobe organizers for max utilization.</p>
+            <a href="#estimator" class="card-link">Explore Designs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Cost Estimator -->
+  <section class="section estimator-section" id="estimator">
+    <div class="container">
+      <div class="estimator-wrapper">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">BUDGET PLANNER</span>
+          <h2 class="section-title">Calculate Your Interior Cost Instantly</h2>
+          <p class="section-desc">Select your configuration and finish preferences to get a ballpark quote in seconds.</p>
+        </div>
+
+        <div class="estimator-box">
+          <div class="estimator-step">
+            <label class="step-label">Step 1: Select Your Home Type</label>
+            <div class="options-grid" id="homeTypeOptions">
+              <button type="button" class="option-btn active" data-type="1bhk" data-cost="240000">1 BHK</button>
+              <button type="button" class="option-btn" data-type="2bhk" data-cost="420000">2 BHK</button>
+              <button type="button" class="option-btn" data-type="3bhk" data-cost="680000">3 BHK</button>
+              <button type="button" class="option-btn" data-type="4bhk" data-cost="950000">4+ BHK / Villa</button>
+            </div>
+          </div>
+
+          <div class="estimator-step">
+            <label class="step-label">Step 2: Choose Interior Package Tier</label>
+            <div class="options-grid" id="packageTierOptions">
+              <button type="button" class="option-btn active" data-multiplier="1.0">
+                <strong>Essential</strong>
+                <span>Laminate finish, standard hardware, high quality</span>
+              </button>
+              <button type="button" class="option-btn" data-multiplier="1.35">
+                <strong>Premium</strong>
+                <span>High-gloss acrylic, soft-close Blum fittings, false ceiling</span>
+              </button>
+              <button type="button" class="option-btn" data-multiplier="1.8">
+                <strong>Luxury Bespoke</strong>
+                <span>PU finish, glass shutters, ambient profile lights & veneer</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="estimator-result-card">
+            <div class="result-info">
+              <span>Estimated Investment:</span>
+              <h3 id="estimatedPrice">₹2.4 Lakhs - ₹3.1 Lakhs*</h3>
+              <p class="result-note">*Includes materials, design, factory manufacturing, and installation.</p>
+            </div>
+            <button class="btn btn-primary open-modal-btn">Get Detailed BOQ Breakdown</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Gallery / Portfolio Filter -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">OUR RECENT WORK</span>
+        <h2 class="section-title">Explore Real Homes Crafted By Shree</h2>
+        <p class="section-desc">Filter through curated modular spaces tailored to modern lifestyle sensibilities.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All Designs</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+        <button class="filter-btn" data-filter="living">Living Room</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="wardrobe">Wardrobes</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-card" data-category="kitchen">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Island Modular Kitchen" loading="lazy" />
+          <div class="portfolio-info">
+            <span class="tag">Kitchen</span>
+            <h4>Contemporary Nordic Kitchen</h4>
+            <p>Bengaluru | 2BHK</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="living">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Warm Minimalist Living Room" loading="lazy" />
+          <div class="portfolio-info">
+            <span class="tag">Living Room</span>
+            <h4>Warm Minimalist Living & Media Unit</h4>
+            <p>Mumbai | 3BHK</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="bedroom">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Modern Master Bedroom" loading="lazy" />
+          <div class="portfolio-info">
+            <span class="tag">Bedroom</span>
+            <h4>Modern Luxe Master Bedroom</h4>
+            <p>Hyderabad | 3BHK</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="wardrobe">
+          <img src="https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=700&q=80" alt="Fluted Glass Wardrobe" loading="lazy" />
+          <div class="portfolio-info">
+            <span class="tag">Wardrobes</span>
+            <h4>Tinted Glass Sliding Wardrobe</h4>
+            <p>Pune | 2BHK</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="kitchen">
+          <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=700&q=80" alt="Parallel Kitchen" loading="lazy" />
+          <div class="portfolio-info">
+            <span class="tag">Kitchen</span>
+            <h4>Parallel Modular Kitchen with Quartz Top</h4>
+            <p>Delhi NCR | 3BHK</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-category="living">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Open Concept Dining" loading="lazy" />
+          <div class="portfolio-info">
+            <span class="tag">Living Room</span>
+            <h4>Open Concept Living & Dining Space</h4>
+            <p>Chennai | 4BHK Villa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (4 Steps) -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">OUR METHOD</span>
+        <h2 class="section-title">Hassle-Free 4-Step Journey</h2>
+        <p class="section-desc">Experience seamless home transformation from consultation to move-in.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="step-badge">01</div>
+          <div class="process-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Meet Your Designer</h3>
+          <p>Discuss your lifestyle needs, budget, and taste over coffee or online video consult.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-badge">02</div>
+          <div class="process-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+          <h3>3D Visualisation</h3>
+          <p>Get life-like 3D renders of your home with transparent itemized pricing & no hidden costs.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-badge">03</div>
+          <div class="process-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3>Factory Production</h3>
+          <p>Precision German engineering and factory manufacturing for flawless finishes and fit.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-badge">04</div>
+          <div class="process-icon"><i class="fa-solid fa-key"></i></div>
+          <h3>45-Day Handover</h3>
+          <p>Clean, speedy on-site installation backed by our 10-year warranty certification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">TESTIMONIALS</span>
+        <h2 class="section-title">Loved by Over 2,000+ Families</h2>
+        <p class="section-desc">See what homeowners have to say about their experience with Shree Interiors.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Shree Interiors converted our 3BHK into a spacious haven. The hidden storage in the master bedroom and the parallel acrylic kitchen are top-notch!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">VS</div>
+            <div>
+              <strong>Vikram & Sneha Patel</strong>
+              <span>3BHK Homeowners</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"They stuck to the 45-day delivery promise strictly. The 3D render matched 98% with the finished home. Transparent pricing made everything simple."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">AK</div>
+            <div>
+              <strong>Ananya Kulkarni</strong>
+              <span>2BHK Modular Interior</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"The quality of the plywood and soft-close fittings is superior to other market players. Kudos to the design team for accommodating our custom requests."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">RM</div>
+            <div>
+              <strong>Rajesh Mehta</strong>
+              <span>Villa Project</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">GOT QUESTIONS?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What does the 45-day delivery guarantee include?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Our 45-day delivery clock starts once the 3D design is signed off and factory order is confirmed. If we delay handover past the agreed schedule, we pay you rent per day until completion.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does Shree Interiors compare in price with local carpenters?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>While local carpentry often leads to unpredictable cost escalations and delays, Shree Interiors offers fixed pricing with zero hidden costs, factory precision, 10-year warranty, and dedicated project managers.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I customize the materials and finishes used?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! You can select from high-grade marine ply (BWP/BWR), anti-scratch acrylics, PU paints, fluted glass, sintered stones, and hardware from Hettich, Hafele, and Blum.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is the initial design consultation completely free?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, your first design consultation, site measurement, and initial 3D concept layout are 100% complimentary without any booking obligations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner -->
+  <section class="cta-banner">
+    <div class="container cta-banner-container">
+      <div class="cta-content">
+        <h2>Ready to Design Your Dream Home?</h2>
+        <p>Book a consultation today and get a personalized 3D layout & itemized quotation.</p>
+      </div>
+      <button class="btn btn-secondary open-modal-btn">Book Free Design Consultation</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="#" class="brand-logo footer-logo">
+          <div class="logo-icon"><i class="fa-solid fa-couch"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">SHREE</span>
+            <span class="brand-sub">INTERIORS</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Premium, customized home interior solutions and modular furniture engineered for modern Indian homes.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Offerings</h4>
+        <ul>
+          <li><a href="#offerings">Modular Kitchens</a></li>
+          <li><a href="#offerings">Master Bedrooms</a></li>
+          <li><a href="#offerings">Living & Dining</a></li>
+          <li><a href="#offerings">Wardrobe Storage</a></li>
+          <li><a href="#offerings">Kids Room Designs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#estimator">Cost Calculator</a></li>
+          <li><a href="#portfolio">Design Showcase</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
+          <li><a href="#faq">Frequently Asked</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-phone"></i> +91 72507 63719</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@shreeinteriors.in</li>
+          <li><i class="fa-solid fa-globe"></i> shreeinteriors.in</li>
+          <li><i class="fa-solid fa-location-dot"></i> Experience Studio 402, Rohini Sec-18/19, Delhi, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; <span id="currentYear"></span> Shree Interiors (shreeinteriors.in). All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Warranty Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919876543210?text=Hi%20Shree%20Interiors,%20I%20would%20like%20to%20get%20a%20quote%20for%20my%20home." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Consultation Lead Modal -->
+  <div class="modal-overlay" id="consultationModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3>Book Free Design Consultation</h3>
+        <p>Get 3D designs, exact itemized estimates & expert advice.</p>
+      </div>
+      <form id="modalLeadForm" class="modal-form">
+        <div class="form-group">
+          <label for="modalName">Full Name</label>
+          <input type="text" id="modalName" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="modalPhone">Phone Number</label>
+          <div class="input-with-prefix">
+            <span class="prefix">+91</span>
+            <input type="tel" id="modalPhone" pattern="[0-9]{10}" placeholder="9876543210" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="modalCity">City</label>
+          <input type="text" id="modalCity" placeholder="e.g. Bengaluru, Mumbai, Pune" required />
+        </div>
+        <div class="form-group">
+          <label for="modalScope">Requirement</label>
+          <select id="modalScope" required>
+            <option value="" disabled selected>Select Interior Scope</option>
+            <option value="full-home">Complete Home Interior</option>
+            <option value="kitchen">Modular Kitchen Only</option>
+            <option value="wardrobe">Wardrobes & Storage</option>
+            <option value="renovation">Home Renovation</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Confirm Consultation Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Thank you! Our designer will contact you within 2 hours.</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
