@@ -150,6 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const toast = document.getElementById('toastNotification');
   const toastMessage = document.getElementById('toastMessage');
 
+  // Backend API URL. Change this when the backend is deployed.
+  const API_BASE_URL = 'http://localhost:5000/api';
+
   function showToast(message) {
     if (!toast) return;
     if (toastMessage) toastMessage.textContent = message;
@@ -159,26 +162,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   }
 
+  async function submitLead(data) {
+    const response = await fetch(`${API_BASE_URL}/leads`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || 'Failed to submit lead');
+    }
+
+    return result;
+  }
+
   // Handle Hero Form
   const heroForm = document.getElementById('heroLeadForm');
   if (heroForm) {
-    heroForm.addEventListener('submit', (e) => {
+    heroForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
       const name = document.getElementById('heroName').value;
-      showToast(`Thank you, ${name}! Your design consultation has been requested.`);
-      heroForm.reset();
+      const phone = document.getElementById('heroPhone').value;
+      const homeType = document.getElementById('heroProperty').value;
+
+      try {
+        await submitLead({
+          name,
+          phone,
+          homeType,
+          source: 'hero'
+        });
+
+        showToast(`Thank you, ${name}! Your design consultation has been requested.`);
+        heroForm.reset();
+      } catch (error) {
+        console.error('Hero lead submission error:', error);
+        showToast('Unable to submit your request. Please try again.');
+      }
     });
   }
 
   // Handle Modal Form
   const modalForm = document.getElementById('modalLeadForm');
   if (modalForm) {
-    modalForm.addEventListener('submit', (e) => {
+    modalForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
       const name = document.getElementById('modalName').value;
-      if (modal) modal.classList.remove('active');
-      showToast(`Thank you, ${name}! We'll contact you within 2 hours.`);
-      modalForm.reset();
+      const phone = document.getElementById('modalPhone').value;
+      const city = document.getElementById('modalCity').value;
+      const scope = document.getElementById('modalScope').value;
+
+      try {
+        await submitLead({
+          name,
+          phone,
+          city,
+          scope,
+          source: 'consultation'
+        });
+
+        if (modal) modal.classList.remove('active');
+        showToast(`Thank you, ${name}! We'll contact you within 2 hours.`);
+        modalForm.reset();
+      } catch (error) {
+        console.error('Consultation submission error:', error);
+        showToast('Unable to submit your request. Please try again.');
+      }
     });
   }
 });
