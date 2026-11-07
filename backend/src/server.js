@@ -1,4 +1,6 @@
 require("dotenv").config();
+console.log("Environment", process.env.NODE_ENV);
+console.log("MongoDB URI", process.env.MONGODB_URI);
 
 const express = require("express");
 const cors = require("cors");
@@ -20,8 +22,17 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/leads", leadRoutes);
 
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-});
+if (require.main === module) {
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+      });
+    })
+    .catch((error) => {
+      console.error("Failed to start server:", error.message);
+      process.exit(1);
+    });
+}
+
+module.exports = app;
